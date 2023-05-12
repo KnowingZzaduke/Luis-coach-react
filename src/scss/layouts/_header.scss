@@ -103,6 +103,32 @@ header {
       }
     }
   }
+  .content_info {
+    align-items: center;
+    padding-top: 4rem;
+    color: v.$blanco;
+    .left {
+        margin-top: 1rem;
+      h1 {
+        margin: 0%;
+        text-align: center;
+      }
+      .content_start{
+        margin-top: 1rem;
+        h3{
+            text-align: center;
+        }
+      }
+    }
+    .right{
+        text-align: center;
+        padding: 1rem 0;
+        video{
+            width: 300px;
+            border-radius: 50%;
+        }
+    }
+  }
 }
 
 //Versión responsive
