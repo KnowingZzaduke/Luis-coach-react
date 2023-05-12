@@ -1,0 +1,44 @@
+@use "variables" as v;
+
+*,
+*::before,
+*,
+::after {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: v.$body;
+  font-family: v.$body2;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul, li{
+  list-style: none;
+  padding: 0%;
+}
+
+button{
+  background-color: v.$azulClaro;
+  color: v.$blanco;
+  border: none;
+  border-radius: 5px;
+  transition: .25s ease;
+  &:hover{
+    background-color: v.$azul;
+  }
+}
+
+a{
+  color: v.$blanco;
+}
