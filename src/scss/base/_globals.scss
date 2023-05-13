@@ -36,6 +36,7 @@ button{
   transition: .25s ease;
   &:hover{
     background-color: v.$azul;
+    cursor: pointer;
   }
 }
 

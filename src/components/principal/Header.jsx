@@ -7,6 +7,7 @@ import {
   FaBook,
   FaBookReader,
   FaPhoneAlt,
+  FaExternalLinkSquareAlt,
 } from "react-icons/fa";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -15,6 +16,20 @@ export function Header() {
   function openMenu() {
     setMenu(!menu);
   }
+  const cardVariants = {
+    offscreen: {
+      y: 300,
+    },
+    onscreen: {
+      y: 50,
+      rotate: -10,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    },
+  };
   return (
     <header>
       <nav>
@@ -30,15 +45,19 @@ export function Header() {
             <ul>
               <li>
                 <a href="#">Inicio</a>
+                <FaHome />
               </li>
               <li>
                 <a href="#">Cursos</a>
+                <FaBook />
               </li>
               <li>
                 <a href="#">Opiniones</a>
+                <FaBookReader />
               </li>
               <li>
                 <a href="#">Contacto</a>
+                <FaPhoneAlt />
               </li>
             </ul>
           </div>
@@ -63,14 +82,21 @@ export function Header() {
               Está página ofrece una gran variedad de cursos que orientan a las
               personas como tener libertad financiera y como lograr éxito.{" "}
             </h3>
-            <div className="content_button"></div>
+            <div className="content_button">
+              <a>
+                <button>
+                  Iniciar
+                  <FaExternalLinkSquareAlt />
+                </button>
+              </a>
+            </div>
           </div>
         </div>
         <motion.div
           className="right"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, y: 150 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 2 }}
         >
           <video
             src={videoLogoLuis}
