@@ -120,6 +120,7 @@ header {
       h1 {
         margin: 0%;
         text-align: center;
+        font-size: 3rem;
       }
       .content_start {
         h3 {
@@ -144,7 +145,7 @@ header {
       video {
         width: 300px;
         border-radius: 50%;
-        transition: .25s ease;
+        transition: 0.25s ease;
       }
     }
   }
@@ -201,6 +202,7 @@ header {
         width: 100%;
         display: flex;
         justify-content: center;
+        height: auto;
         .content_enlaces {
           .content_toggle-close {
             display: none;
@@ -235,7 +237,7 @@ header {
       height: 100%;
       .left {
         h1 {
-          font-size: 50px;
+          font-size: 4rem;
         }
       }
       .right {

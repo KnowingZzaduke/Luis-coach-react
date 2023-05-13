@@ -1,0 +1,54 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.section_courses {
+  height: auto;
+  h2 {
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .content_cursos {
+    .curso {
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      .info {
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+        h3 {
+          margin: 1rem 0;
+        }
+        img {
+          width: 100%;
+          border-radius: 20px;
+          padding: 0 10px;
+          height: 100%;
+          object-fit: cover;
+          transition: 0.55s ease;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+//Versión responsive
+@include m.desktop {
+  .section_courses {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      font-size: 3rem;
+    }
+    .content_cursos{
+        margin-top: 2rem;
+    }
+  }
+}

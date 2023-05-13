@@ -1,9 +1,10 @@
-import { Principal } from './components/principal/Principal'
+import { Principal } from "./components/principal/Principal";
 function App() {
- 
   return (
-    <Principal/>
-  )
+    <>
+      <Principal />
+    </>
+  );
 }
 
-export default App
+export default App;

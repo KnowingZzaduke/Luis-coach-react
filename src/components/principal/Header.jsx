@@ -84,19 +84,23 @@ export function Header() {
             </h3>
             <div className="content_button">
               <a>
-                <button>
+                <motion.button
+                initial={{x: -200}}
+                animate={{x: 0}}
+                transition={{duration: 1}}
+                >
                   Iniciar
                   <FaExternalLinkSquareAlt />
-                </button>
+                </motion.button>
               </a>
             </div>
           </div>
         </div>
         <motion.div
           className="right"
-          initial={{ opacity: 0, y: 150 }}
+          initial={{ opacity: 0, y: 300 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2 }}
+          transition={{ type: "spring", bounce: 0.4, duration: 3 }}
         >
           <video
             src={videoLogoLuis}
