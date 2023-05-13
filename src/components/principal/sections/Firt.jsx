@@ -40,7 +40,7 @@ export function Firt() {
     },
   };
   return (
-    <section className="section_courses">
+    <section className="section_courses" id="courses">
       <h2>Cursos</h2>
       <div className="content_cursos">
         <motion.div

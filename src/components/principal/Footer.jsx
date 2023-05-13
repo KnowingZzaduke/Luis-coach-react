@@ -23,7 +23,7 @@ export function Footer() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://www.youtube.com/channel/UCmo9j6u3RgvChsm8j8gVJ3A" target="_blank">
               <FaYoutube />
             </a>
           </li>

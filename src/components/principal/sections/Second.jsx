@@ -34,7 +34,7 @@ export function Second() {
     },
   };
   return (
-    <section className="section_benefits">
+    <section className="section_benefits" id="benefits">
       <h2>Beneficios</h2>
       <motion.div
         className="content_benefits"

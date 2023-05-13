@@ -34,25 +34,25 @@ export function Header() {
                 <FaHome />
               </li>
               <li>
-                <a href="#">Cursos</a>
+                <a href="#courses">Cursos</a>
                 <FaBook />
               </li>
               <li>
-                <a href="#">Opiniones</a>
+                <a href="#benefits">Beneficios</a>
                 <FaBookReader />
               </li>
               <li>
-                <a href="#">Contacto</a>
+                <a href="#opinions">Opiniones</a>
                 <FaPhoneAlt />
               </li>
             </ul>
           </div>
         </div>
         <div className="right">
-          <a href="#">
+          <a href="signin">
             <button>Signin</button>
           </a>
-          <a href="#">
+          <a href="signup">
             <button>Signup</button>
           </a>
         </div>
@@ -71,9 +71,9 @@ export function Header() {
             <div className="content_button">
               <a>
                 <motion.button
-                initial={{x: -200}}
-                animate={{x: 0}}
-                transition={{duration: 1}}
+                  initial={{ x: -200 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 1 }}
                 >
                   Iniciar
                   <FaExternalLinkSquareAlt />

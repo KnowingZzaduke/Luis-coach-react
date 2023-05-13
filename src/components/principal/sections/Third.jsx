@@ -35,7 +35,7 @@ export function Third() {
     },
   };
   return (
-    <section className="section_opinions">
+    <section className="section_opinions" id="opinions">
       <div className="left">
         <h2>Opiniones</h2>
         <motion.div className="content_opinions">
