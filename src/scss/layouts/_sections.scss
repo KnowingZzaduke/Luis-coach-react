@@ -27,11 +27,44 @@
           padding: 0 10px;
           height: 100%;
           object-fit: cover;
-          transition: 0.55s ease;
-          &:hover {
-            transform: scale(1.1);
-          }
         }
+      }
+    }
+  }
+}
+
+.section_benefits {
+  background-color: v.$negro;
+  color: v.$blanco;
+  h2 {
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .content_benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .benefit {
+        margin-top: 2rem;
+      .img {
+        text-align: center;
+        position: relative;
+        .img_found {
+          width: 300px;
+          position: relative;
+        }
+        .img_b {
+            left: 165px;
+            top: 70px;
+          position: absolute;
+          width: 150px;
+          filter: invert(100%);
+        }
+      }
+      p{
+        text-align: center;
+        font-size: 20px;
+        margin-top: 1rem;
       }
     }
   }
@@ -47,8 +80,18 @@
     h2 {
       font-size: 3rem;
     }
-    .content_cursos{
-        margin-top: 2rem;
+    .content_cursos {
+      margin-top: 2rem;
+      .curso {
+        .info {
+          img {
+            transition: 0.55s ease;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
     }
   }
 }

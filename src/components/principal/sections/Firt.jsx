@@ -47,7 +47,7 @@ export function Firt() {
           className="curso"
           initial={cardVariants.offscreen}
           whileInView={cardVariants.onscreen}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.4 }}
 
         >
           {cursos.map((curso) => (
