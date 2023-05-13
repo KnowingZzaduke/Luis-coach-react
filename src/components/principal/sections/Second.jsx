@@ -1,4 +1,4 @@
-import FondoBenefits from "/img/fondo-beneficios.png";
+import { motion } from "framer-motion";
 export function Second() {
   const benefits = [
     {
@@ -17,20 +17,42 @@ export function Second() {
       description: "Aprende nuevas habilidades financieras",
     },
   ];
+
+  const cardVariants = {
+    offscreen: {
+      y: 200,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 1,
+      },
+    },
+  };
   return (
     <section className="section_benefits">
       <h2>Beneficios</h2>
-      <div className="content_benefits">
+      <motion.div
+        className="content_benefits"
+        initial={cardVariants.offscreen}
+        whileInView={cardVariants.onscreen}
+        viewport={{ once: true, amount: 0.4 }}
+      >
         {benefits.map((bene) => (
-          <div className="benefit" key={bene.id}>
+          <motion.div className="benefit" key={bene.id} variants={cardVariants}>
             <div className="img">
-              <img src={FondoBenefits} className="img_found" />
-              <img src={bene.img} className="img_b"/>
+              <div className="found">
+                <img src={bene.img} className="img_b" />
+              </div>
             </div>
             <p>{bene.description}</p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

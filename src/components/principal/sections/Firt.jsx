@@ -27,7 +27,7 @@ export function Firt() {
   const cardVariants = {
     offscreen: {
       y: 200,
-      opacity: 0
+      opacity: 0,
     },
     onscreen: {
       y: 0,
@@ -48,7 +48,6 @@ export function Firt() {
           initial={cardVariants.offscreen}
           whileInView={cardVariants.onscreen}
           viewport={{ once: true, amount: 0.4 }}
-
         >
           {cursos.map((curso) => (
             <motion.div className="info" key={curso.id} variants={cardVariants}>

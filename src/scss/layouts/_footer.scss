@@ -1,0 +1,45 @@
+@use "../base/variables" as v;
+
+footer {
+  background-color: v.$negro;
+  color: v.$blanco;
+  margin-top: 1rem;
+  h2 {
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 2rem;
+  }
+  ul {
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    margin-top: 1rem;
+    li {
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .copy {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    margin-top: 1rem;
+    align-items: center;
+    padding-bottom: 1rem;
+    ul {
+      display: flex;
+      align-items: center;
+      margin-top: 0%;
+      li {
+        a {
+          &:hover {
+            color: v.$azulClaro;
+          }
+        }
+      }
+    }
+  }
+}
