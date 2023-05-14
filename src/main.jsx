@@ -4,8 +4,9 @@ import App from "./App";
 import "./scss/app.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ErrorPage } from "./components/error/ErrorPage";
-import { Signin } from "./routes/Signin";
-import { Signup } from "./routes/Signup";
+import { Signin } from "./routes/forms/Signin";
+import { Signup } from "./routes/forms/Signup";
+import { Welcome } from "./routes/welcome/Welcome";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "signup",
     element: <Signup />,
+  },
+  {
+    path: "/welcome",
+    element: <Welcome />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

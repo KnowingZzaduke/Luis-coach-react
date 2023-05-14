@@ -1,5 +1,7 @@
 import Setup from "/img/setup-formulario.webp";
 import { FaUserCircle, FaUnlock, FaRegEnvelope } from "react-icons/fa";
+import Checkbox from "@mui/material/Checkbox";
+
 export function Signup() {
   return (
     <div className="content_formulario">
@@ -22,10 +24,16 @@ export function Signup() {
           </div>
           <div className="input">
             <FaUnlock />
-            <input type="password" placeholder="Contraseña" />
+            <input type="password" placeholder="Repite tu contraseña" />
           </div>
         </div>
-        <input type="checkbox"/>
+        <div className="input_check">
+          <Checkbox checked />
+          <p>
+            Acepto los 
+            <a href="#">terminos y condiciones</a>.
+          </p>
+        </div>
         <div className="content_button">
           <button>Registrarme</button>
         </div>

@@ -50,6 +50,15 @@
         }
       }
     }
+    .input_check {
+      display: flex;
+      align-items: center;
+      color: v.$blanco;
+      p{
+        display: flex;
+        column-gap: 5px;
+      }
+    }
     .content_button {
       button {
         width: 100%;

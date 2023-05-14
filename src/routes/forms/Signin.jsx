@@ -1,9 +1,15 @@
 import Setup from "/img/setup-formulario.webp";
 import { FaUserCircle, FaUnlock } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 export function Signin() {
+  const navigate = useNavigate();
+  function handleSubmit(e) {
+    e.preventDefault();
+    navigate("/welcome");
+  }
   return (
     <div className="content_formulario">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="content_img">
           <img src={Setup} />
         </div>
