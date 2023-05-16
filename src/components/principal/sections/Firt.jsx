@@ -43,19 +43,20 @@ export function Firt() {
     <section className="section_courses" id="courses">
       <h2>Cursos</h2>
       <div className="content_cursos">
-        <motion.div
-          className="curso"
-          initial={cardVariants.offscreen}
-          whileInView={cardVariants.onscreen}
-          viewport={{ once: true, amount: 0.4 }}
-        >
+        <div className="curso">
           {cursos.map((curso) => (
-            <motion.div className="info" key={curso.id} variants={cardVariants}>
+            <motion.div
+              className="info"
+              key={curso.id}
+              initial={cardVariants.offscreen}
+              whileInView={cardVariants.onscreen}
+              viewport={{ once: true, amount: 0.4 }}
+            >
               <h3>{curso.name}</h3>
               <img src={curso.img} />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
