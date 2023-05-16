@@ -17,7 +17,7 @@ export function Header() {
     setMenu(!menu);
   }
   return (
-    <header>
+    <header className="header_p">
       <nav>
         <div className="left">
           <img src={LogoLuis} />

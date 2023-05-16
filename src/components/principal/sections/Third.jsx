@@ -38,7 +38,7 @@ export function Third() {
     <section className="section_opinions" id="opinions">
       <div className="left">
         <h2>Opiniones</h2>
-        <motion.div className="content_opinions">
+        <div className="content_opinions">
           {opinions.map((opinion) => (
             <motion.div
               className="opinion"
@@ -52,14 +52,14 @@ export function Third() {
               <p>{opinion.opinion}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
       <div className="right">
         <h2>Contactame</h2>
         <div className="content_form">
           <form>
             <div className="campus">
-              <input type="text" placeholder="Nombre"/>
+              <input type="text" placeholder="Nombre" />
             </div>
             <div className="campus">
               <input type="text" placeholder="Correo" />
