@@ -1,29 +1,8 @@
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { DataContext } from "../../../context/DataContext";
 export function Firt() {
-  const cursos = [
-    {
-      id: 1,
-      img: "/img/finanza2.jpg",
-      name: "Nombre de curso",
-    },
-    {
-      id: 2,
-
-      img: "/img/found-header.jpg",
-      name: "Nombre de curso",
-    },
-    {
-      id: 3,
-      img: "/img/finanza2.jpg",
-      name: "Nombre de curso",
-    },
-    {
-      id: 4,
-      img: "/img/found-header.jpg",
-      name: "Nombre de curso",
-    },
-  ];
-
+  const { courses } = useContext(DataContext);
   const cardVariants = {
     offscreen: {
       y: 200,
@@ -44,16 +23,16 @@ export function Firt() {
       <h2>Cursos</h2>
       <div className="content_cursos">
         <div className="curso">
-          {cursos.map((curso) => (
+          {courses.map((course) => (
             <motion.div
               className="info"
-              key={curso.id}
+              key={course.id}
               initial={cardVariants.offscreen}
               whileInView={cardVariants.onscreen}
               viewport={{ once: true, amount: 0.4 }}
             >
-              <h3>{curso.name}</h3>
-              <img src={curso.img} />
+              <h3>{course.name}</h3>
+              <img src={course.img} />
             </motion.div>
           ))}
         </div>

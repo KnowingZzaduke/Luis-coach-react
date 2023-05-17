@@ -1,29 +1,10 @@
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { DataContext } from "../../context/DataContext";
+import { Link } from "react-router-dom";
 export function Courses() {
-  const courses = [
-    {
-      id: 1,
-      img: "/img/finanza2.jpg",
-      name: "Educación financiera",
-    },
-    {
-      id: 2,
-      img: "/img/finanza2.jpg",
-      name: "Educación financiera",
-    },
-    {
-      id: 3,
-      img: "/img/finanza2.jpg",
-      name: "Educación financiera",
-    },
-    {
-      id: 4,
-      img: "/img/finanza2.jpg",
-      name: "Educación financiera",
-    },
-  ];
-
+  const { courses } = useContext(DataContext);
   const cardVariants = {
     offscreen: {
       y: 200,
@@ -40,7 +21,7 @@ export function Courses() {
     },
   };
   return (
-    <div className="content_catalogue">
+    <div className="content_catalogue" id="catalogo">
       <h1>Catálogo de cursos</h1>
       <div className="content_courses">
         {courses.map((course) => (
@@ -49,14 +30,17 @@ export function Courses() {
             initial={cardVariants.offscreen}
             whileInView={cardVariants.onscreen}
             viewport={{ once: true, amount: 0.4 }}
+            key={course.id}
           >
             <h2>{course.name}</h2>
             <img src={course.img} />
             <div className="content_button">
-              <button>
-                Ver más detalles
-                <FaRegArrowAltCircleRight />
-              </button>
+              <Link to={`/info&cursos/${course.id}`} target="_blank">
+                <button>
+                  Ver más detalles
+                  <FaRegArrowAltCircleRight />
+                </button>
+              </Link>
             </div>
             <hr />
           </motion.div>

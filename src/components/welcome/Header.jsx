@@ -104,7 +104,7 @@ export function HeaderW() {
         >
           <img src={Finanzas} />
           <div className="content_button">
-            <a>
+            <a href="#catalogo">
               <button>
                 Ir a cursos
                 <FaPuzzlePiece />
@@ -118,7 +118,7 @@ export function HeaderW() {
             <p ref={name2} />
           </div>
           <div className="content_button">
-            <a>
+            <a href="#catalogo">
               <button>
                 Ir a cursos
                 <FaPuzzlePiece />
