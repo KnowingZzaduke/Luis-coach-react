@@ -9,6 +9,7 @@ import { Signin } from "./routes/forms/Signin";
 import { Signup } from "./routes/forms/Signup";
 import { Welcome } from "./routes/welcome/Welcome";
 import { InfoCourses } from "./routes/infoCourses/InfoCourses";
+import { Info } from "./components/infoCourses/Info";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,12 @@ const router = createBrowserRouter([
   {
     path: "/info&cursos/:id",
     element: <InfoCourses />,
+    children: [
+      {
+        path: "/info&cursos/:id/info",
+        element: <Info />,
+      },
+    ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

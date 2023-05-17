@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { DataContext } from "../../context/DataContext";
 import LogoLuis from "/img/luis-transparent.png";
 import FotoLuis from "/img/Foto-Luis Gabriel.png";
+import { motion } from "framer-motion";
 import {
   FaBars,
   FaTimesCircle,
@@ -11,14 +12,31 @@ import {
   FaBookReader,
   FaPowerOff,
 } from "react-icons/fa";
+import { benefits } from "../../data/const";
 export function Info() {
   const { id } = useParams();
   const { courses } = useContext(DataContext);
   const [menu, setMenu] = useState(false);
-  const course = courses.find((course) => course.id === parseInt(id));
   function openMenu() {
     setMenu(!menu);
   }
+  const cardVariants = [
+    {
+      offscreen: {
+        opacity: 0,
+        y: 200,
+      },
+      onscreen: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          type: "spring",
+          bounce: 0.4,
+          duration: 3,
+        },
+      },
+    },
+  ];
   return (
     <div className="content_info-courses">
       <header className="header_i">
@@ -66,28 +84,20 @@ export function Info() {
           <div className="left">
             <h1>Beneficios</h1>
             <ul>
-              <li>
-                <h2>Asesorías</h2>
-                <p>
-                  Obtén asesorías personalizadas sobre dudas surgidas durante el
-                  proceso de formación.
-                </p>
-              </li>
-              <li>
-                <h2>Acceso de por vida</h2>
-                <p>Tendrás acceso al curso de por vida.</p>
-              </li>
-              <li>
-                <h2>Acceso a eventos</h2>
-                <p>
-                  Obtienes acceso a eventos relacionados con la superación
-                  personal y de como alcanzar el éxito.
-                </p>
-              </li>
-              <li>
-                <h2>Recibirás actualizaciones</h2>
-                <p>Recibirás actualizaciones de los cursos adquiridos.</p>
-              </li>
+              {benefits.map((benefit) => (
+                <motion.li
+                  initial={{ y: -100 }}
+                  animate={{ y: 2 }}
+                  transition={{ duration: 1 }}
+                  key={benefit.id}
+                >
+                  <span>🟢</span>
+                  <div className="benefit">
+                    <h2>{benefit.benefit}</h2>
+                    <p>{benefit.description}</p>
+                  </div>
+                </motion.li>
+              ))}
             </ul>
           </div>
           <div className="right">
@@ -100,10 +110,19 @@ export function Info() {
         {courses?.map((course) => {
           if (course.id === parseInt(id)) {
             return (
-              <>
-                <div className="left" key={course.id}>
+              <div key={course.id} className="content_info">
+                <motion.div
+                  className="left"
+                  initial={cardVariants.offscreen}
+                  whileInView={cardVariants.onscreen}
+                  viewport={{ once: true, amount: 0.4 }}
+                  key={id}
+                >
                   <img src={course.img} alt={course.title} />
-                </div>
+                  <div className="content_button">
+                    <button>Comprar</button>
+                  </div>
+                </motion.div>
                 <div className="right">
                   <h2>{course.name}</h2>
                   <p>{course.description}</p>
@@ -111,7 +130,7 @@ export function Info() {
                     <button>Comprar</button>
                   </div>
                 </div>
-              </>
+              </div>
             );
           } else {
             return null;

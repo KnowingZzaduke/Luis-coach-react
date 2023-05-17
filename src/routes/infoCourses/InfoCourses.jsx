@@ -1,4 +1,4 @@
-import {Info} from '../../components/infoCourses/Info';
+import { Outlet } from 'react-router-dom';
 export function InfoCourses() {
-  return <Info />;
+  return <Outlet/>;
 }

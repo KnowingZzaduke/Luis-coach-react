@@ -35,7 +35,7 @@ export function Courses() {
             <h2>{course.name}</h2>
             <img src={course.img} />
             <div className="content_button">
-              <Link to={`/info&cursos/${course.id}`} target="_blank">
+              <Link to={`/info&cursos/${course.id}/info`} target="_blank">
                 <button>
                   Ver más detalles
                   <FaRegArrowAltCircleRight />
