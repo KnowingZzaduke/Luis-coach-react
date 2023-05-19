@@ -3,134 +3,10 @@
 
 .content_info-courses {
   .header_i {
-    background: v.$azulGradiente;
-    nav {
-      position: fixed;
-      width: 100%;
-      display: flex;
-      top: 0%;
-      height: 60px;
-      justify-content: center;
-      backdrop-filter: blur(5px);
-      z-index: 9999;
-      .left {
-        display: block;
-        img {
-          width: 150px;
-          position: absolute;
-          top: -70%;
-          left: -5%;
-        }
-      }
-      .center_v {
-        background-color: v.$grisMedio;
-        position: fixed;
-        right: -100%;
-        top: 0%;
-        width: 180px;
-        border-radius: 5px;
-        transition: 0.99s ease;
-        z-index: 9999;
-        height: 100vh;
-        .content_enlaces {
-          .content_toggle-close {
-            display: flex;
-            align-items: center;
-            flex-direction: row-reverse;
-            justify-content: center;
-            margin-top: 1rem;
-            column-gap: 5px;
-            svg {
-              font-size: 30px;
-              transition: 0.25s ease;
-              &:hover {
-                transform: scale(1.1);
-                cursor: pointer;
-              }
-            }
-            h3 {
-              font-size: 25px;
-            }
-          }
-          ul {
-            li {
-              background-color: v.$azulClaro;
-              border-radius: 5px;
-              display: flex;
-              align-items: center;
-              column-gap: 5px;
-              justify-content: center;
-              padding: 10px 0;
-              text-align: center;
-              flex-direction: row-reverse;
-              margin: 10px 5px;
-              &:hover {
-                background-color: v.$azul;
-                cursor: pointer;
-              }
-              a {
-                font-size: 18px;
-                transition: 0.25s ease;
-                width: 77px;
-                &:hover {
-                  text-decoration: underline;
-                  color: v.$gris;
-                }
-              }
-            }
-            .button_close-sesion {
-              display: flex;
-              a {
-                width: 100px;
-              }
-              svg {
-                color: v.$negro;
-              }
-            }
-          }
-        }
-      }
-      .center_d {
-        right: 0%;
-      }
-      .right {
-        display: none;
-        align-items: center;
-        width: 100%;
-        column-gap: 10px;
-        justify-content: center;
-        a {
-          button {
-            padding: 10px 30px;
-            column-gap: 10px;
-            &:hover {
-              cursor: pointer;
-            }
-          }
-        }
-      }
-      .content_toggle-open-v {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: end;
-        svg {
-          color: v.$blanco;
-          font-size: 30px;
-          margin-right: 5px;
-          transition: 0.25s ease;
-          &:hover {
-            transform: scale(1.1);
-            cursor: pointer;
-          }
-        }
-      }
-    }
     .content_benefits {
       padding: 0.1px;
       .left {
         margin-top: 4rem;
-        color: v.$blanco;
         h1 {
           font-size: 3rem;
           text-align: center;
@@ -153,86 +29,14 @@
         }
         h3 {
           text-align: center;
-          color: v.$blanco;
-        }
-      }
-    }
-  }
-  .section_info-curso {
-    background-image: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 15px,
-      rgba(202, 199, 199, 0.5) 15px,
-      rgba(202, 199, 199, 0.5) 20px
-    );
-    .content_info {
-      display: flex;
-      flex-direction: column-reverse;
-
-      .left {
-        text-align: center;
-        img {
-          width: 300px;
-          border-radius: 5px;
-        }
-        .content_button {
-          button {
-            padding: 10px 0;
-            width: 300px;
-            margin: 10px auto;
-          }
-        }
-      }
-      .right {
-        margin-top: 2rem;
-        h2 {
-          text-align: center;
           font-size: 2rem;
-        }
-        p {
-          margin: 1rem 5px;
-          font-size: 20px;
-          text-align: center;
-        }
-        .content_button {
-          display: none;
+          margin-top: 2rem;
         }
       }
     }
   }
 }
 
-//Versión responsive
-@include m.tablet {
-  .content_info-courses {
-    .header_i {
-      nav {
-        .center_v {
-          width: 200px;
-        }
-        .right {
-          justify-content: end;
-          margin-right: 20px;
-        }
-      }
-    }
-    .section_info-curso {
-      .content_info {
-        .left {
-          img {
-            width: 400px;
-          }
-          .content_button {
-            button {
-              width: 400px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 @include m.desktop {
   .content_info-courses {
     .header_i {
@@ -240,65 +44,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      nav {
-        .left {
-          img {
-            left: 0%;
-            position: relative;
-          }
-        }
-        .center_v {
-          position: relative;
-          right: auto;
-          bottom: auto;
-          top: auto;
-          width: auto;
-          border-radius: 5px;
-          background-color: transparent;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          height: auto;
-          .content_enlaces {
-            .content_toggle-close {
-              display: none;
-            }
-            ul {
-              display: flex;
-              column-gap: 10px;
-              li {
-                background-color: transparent;
-                svg {
-                  display: none;
-                  column-gap: 0;
-                }
-                &:hover {
-                  background-color: transparent;
-                }
-              }
-              .button_close-sesion {
-                display: none;
-              }
-            }
-          }
-        }
-        .right {
-          width: auto;
-          display: block;
-          display: flex;
-          button {
-            display: flex;
-            align-items: center;
-            width: 120px;
-            column-gap: 5px;
-            justify-content: center;
-            padding: 10px 0;
-          }
-        }
-        .content_toggle-open-v {
-          display: none;
-        }
-      }
       .content_benefits {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -323,32 +68,11 @@
         }
         .right {
           margin: 0%;
-        }
-      }
-    }
-    .section_info-curso {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .content_info {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        .left {
-          .content_button {
-            display: none;
-          }
-        }
-        .right {
-          .content_button {
-            display: block;
-            text-align: center;
-            button {
-              padding: 10px 0;
-              width: 90%;
-              margin: 10px auto;
-            }
-          }
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
       }
     }

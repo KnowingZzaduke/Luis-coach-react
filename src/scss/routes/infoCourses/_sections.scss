@@ -1,0 +1,163 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.content_info-courses {
+  .section_info-curso {
+    background-color: v.$blanco;
+    .content_info {
+      display: flex;
+      flex-direction: column-reverse;
+      background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 15px,
+        rgba(202, 199, 199, 0.5) 15px,
+        rgba(202, 199, 199, 0.5) 20px
+      );
+      padding: 1rem 0;
+      .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 300px;
+          border-radius: 5px;
+        }
+        .content_button {
+          button {
+            padding: 10px 0;
+            width: 300px;
+            margin: 10px auto;
+          }
+        }
+      }
+      .right {
+        margin-top: 2rem;
+        h2 {
+          text-align: center;
+          font-size: 2rem;
+        }
+        p {
+          margin: 1rem 5px;
+          font-size: 20px;
+          text-align: center;
+        }
+        .content_button {
+          display: none;
+        }
+      }
+    }
+  }
+  .section_modules-curso {
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .content_modules {
+      overflow: hidden;
+      .module {
+        background-color: v.$azulAguaMarina;
+        width: 90%;
+        margin: 2rem auto;
+        border-radius: 5px;
+        padding: 5rem 0;
+        .left {
+          width: 100%;
+          h3,
+          p {
+            padding: 1rem;
+          }
+          h3 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 20px;
+          }
+        }
+        .right {
+          .circle {
+            background-color: v.$azulClaro;
+            margin: 0% auto;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            opacity: 20%;
+            background-image: repeating-linear-gradient(
+              45deg,
+              transparent,
+              transparent 15px,
+              rgba(202, 199, 199, 0.5) 15px,
+              rgba(202, 199, 199, 0.5) 20px
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+//Versión responsive
+@include m.tablet {
+  .content_info-courses {
+    .section_info-curso {
+      .content_info {
+        .left {
+          img {
+            width: 400px;
+          }
+          .content_button {
+            button {
+              width: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include m.desktop {
+  .content_info-courses {
+    .section_info-curso {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .content_info {
+        display: grid;
+        height: 400px;
+        grid-template-columns: repeat(2, 1fr);
+        .left {
+          .content_button {
+            display: none;
+          }
+        }
+        .right {
+          .content_button {
+            display: block;
+            text-align: center;
+            button {
+              padding: 10px 0;
+              width: 90%;
+              margin: 10px auto;
+            }
+          }
+        }
+      }
+    }
+    .section_modules-curso {
+      .content_modules {
+        .module {
+          display: flex;
+          align-items: center;
+          width: 80%;
+          .right {
+            .circle {
+              margin-right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@
   }
   .content_courses {
     text-align: center;
+    overflow: hidden;
     .course {
       margin: 1rem 0;
       text-align: center;
@@ -17,7 +18,9 @@
       }
       img {
         width: 300px;
+        height: 300px;
         margin: 10px 5px 0 5px;
+        object-fit: cover;
         border-radius: 5px;
         border: 1px solid v.$negro;
       }
