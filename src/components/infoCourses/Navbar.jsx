@@ -8,6 +8,7 @@ import {
   FaPowerOff,
 } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 export function NavbarI() {
   const [menu, setMenu] = useState(false);
   function openMenu() {
@@ -26,11 +27,11 @@ export function NavbarI() {
           </div>
           <ul>
             <li>
-              <a href="#">Inicio</a>
+              <Link to="/info&cursos/:id/info">Inicio</Link>
               <FaHome />
             </li>
             <li>
-              <a href="#courses">Biblioteca</a>
+              <Link to="/info&cursos/:id/biblioteca">Biblioteca</Link>
               <FaBook />
             </li>
             <li>

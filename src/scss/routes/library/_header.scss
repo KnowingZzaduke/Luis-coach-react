@@ -1,0 +1,19 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.headerL {
+  .content_background-welcome {
+    margin-top: 4rem;
+    background-color: v.$azul;
+    padding: 10px 0;
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      color: v.$blanco;
+    }
+  }
+  p {
+    font-size: 20px;
+    margin: 10px;
+  }
+}

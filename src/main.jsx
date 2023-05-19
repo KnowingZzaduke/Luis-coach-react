@@ -10,6 +10,7 @@ import { Signup } from "./routes/forms/Signup";
 import { Welcome } from "./routes/welcome/Welcome";
 import { InfoCourses } from "./routes/infoCourses/InfoCourses";
 import { Info } from "./components/infoCourses/Info";
+import { Library } from "./components/library/Library";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/info&cursos/:id/info",
         element: <Info />,
+      },
+      {
+        path: "/info&cursos/:id/biblioteca",
+        element: <Library />,
       },
     ],
   },
