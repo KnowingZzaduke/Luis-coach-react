@@ -1,10 +1,15 @@
 import Setup from "/img/setup-formulario.webp";
 import { FaUserCircle, FaUnlock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Swal from "sweetalert2";
 export function Signin() {
   const navigate = useNavigate();
+  const [user, setUser] = useState("");
+  const [password, setPassword] = useState(null);
   function handleSubmit(e) {
     e.preventDefault();
+    //Petición
     navigate("/welcome/cursos");
   }
   return (
@@ -16,11 +21,15 @@ export function Signin() {
         <div className="inputs">
           <div className="input">
             <FaUserCircle />
-            <input type="text" placeholder="Usuario" />
+            <input
+              type="text"
+              placeholder="Usuario"
+              onChange={(e) => setUser(e.target.value)}
+            />
           </div>
           <div className="input">
             <FaUnlock />
-            <input type="password" placeholder="Contraseña" />
+            <input type="password" placeholder="Contraseña" onChange={(e) => setPassword(e.target.value)}/>
           </div>
         </div>
         <div className="content_button">

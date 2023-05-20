@@ -35,7 +35,7 @@ export function NavbarW() {
               <FaBook />
             </li>
             <li>
-              <a href="#benefits">Asesorias</a>
+              <a href="https://walink.co/baf522" target="_blank">Contactar</a>
               <FaBookReader />
             </li>
             <li className="button_close-sesion">
