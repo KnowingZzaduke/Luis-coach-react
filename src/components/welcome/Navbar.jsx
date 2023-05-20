@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-export function NavbarI() {
+export function NavbarW() {
   const [menu, setMenu] = useState(false);
   function openMenu() {
     setMenu(!menu);
@@ -31,10 +31,12 @@ export function NavbarI() {
               <FaHome />
             </li>
             <li>
-              <a href="https://walink.co/baf522" target="_blank">
-                Contactar
-              </a>
+              <Link to="/welcome/biblioteca">Biblioteca</Link>
               <FaBook />
+            </li>
+            <li>
+              <a href="#benefits">Asesorias</a>
+              <FaBookReader />
             </li>
             <li className="button_close-sesion">
               <a>Cerrar sesión</a>

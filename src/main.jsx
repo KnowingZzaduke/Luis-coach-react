@@ -8,10 +8,10 @@ import { ErrorPage } from "./components/error/ErrorPage";
 import { Signin } from "./routes/forms/Signin";
 import { Signup } from "./routes/forms/Signup";
 import { Welcome } from "./routes/welcome/Welcome";
+import { WelcomeW } from "./components/welcome/Welcome";
 import { InfoCourses } from "./routes/infoCourses/InfoCourses";
 import { Info } from "./components/infoCourses/Info";
-import { Library } from "./components/library/Library";
-
+import { Library } from "./components/welcome/library/Library";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +29,16 @@ const router = createBrowserRouter([
   {
     path: "/welcome",
     element: <Welcome />,
+    children: [
+      {
+        path: "/welcome/cursos",
+        element: <WelcomeW />,
+      },
+      {
+        path: "/welcome/biblioteca",
+        element: <Library />,
+      },
+    ],
   },
   {
     path: "/info&cursos/:id",
@@ -37,10 +47,6 @@ const router = createBrowserRouter([
       {
         path: "/info&cursos/:id/info",
         element: <Info />,
-      },
-      {
-        path: "/info&cursos/:id/biblioteca",
-        element: <Library />,
       },
     ],
   },

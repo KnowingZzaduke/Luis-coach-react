@@ -1,14 +1,5 @@
-import LogoLuis from "/img/luis-transparent.png";
 import Finanzas from "/img/finanzas-header.jpg";
-import {
-  FaBars,
-  FaTimesCircle,
-  FaHome,
-  FaBook,
-  FaBookReader,
-  FaPowerOff,
-  FaPuzzlePiece,
-} from "react-icons/fa";
+import { FaPuzzlePiece } from "react-icons/fa";
 import Typed from "typed.js";
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -55,46 +46,6 @@ export function HeaderW() {
   };
   return (
     <header className="header_w">
-      <nav>
-        <div className="left">
-          <img src={LogoLuis} />
-        </div>
-        <div className={`center_v ${menu ? "center_d" : ""}`}>
-          <div className="content_enlaces">
-            <div className="content_toggle-close">
-              <h3>Cerrar</h3>
-              <FaTimesCircle onClick={openMenu} />
-            </div>
-            <ul>
-              <li>
-                <a href="#">Inicio</a>
-                <FaHome />
-              </li>
-              <li>
-                <a href="#courses">Biblioteca</a>
-                <FaBook />
-              </li>
-              <li>
-                <a href="#benefits">Asesorias</a>
-                <FaBookReader />
-              </li>
-              <li className="button_close-sesion">
-                <a>Cerrar sesión</a>
-                <FaPowerOff />
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="right v">
-          <button>
-            Cerrar sesión
-            <FaPowerOff />
-          </button>
-        </div>
-        <div className="content_toggle-open-v">
-          <FaBars onClick={openMenu} />
-        </div>
-      </nav>
       <div className="content_welcome">
         <motion.div
           className="left"

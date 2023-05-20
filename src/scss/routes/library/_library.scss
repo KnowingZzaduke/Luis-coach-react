@@ -1,3 +1,124 @@
-@use '../../base/variables' as v;
-@use '../../base/mixins' as m;
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
 
+.section_recomendation-courses {
+  .info {
+    h2 {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    p {
+      text-align: center;
+      font-size: 20px;
+      margin: 1rem 5px;
+    }
+  }
+  .recomended_courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .courses {
+      .left {
+        img {
+          width: 300px;
+          margin: 1rem auto;
+          border-radius: 5px;
+        }
+        .content_button {
+          display: flex;
+          justify-content: center;
+          column-gap: 5px;
+          button {
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+          }
+        }
+      }
+      .right {
+        h2 {
+          text-align: center;
+          margin: 1rem 0;
+        }
+        p {
+          margin: 10px 5px;
+          text-align: center;
+        }
+        .content_button {
+          justify-content: center;
+          display: none;
+          column-gap: 5px;
+          button {
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Versión responsive
+@include m.tablet {
+  .section_recomendation-courses {
+    .recomended_courses {
+      .courses {
+        .left {
+          img {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+          }
+        }
+        .right {
+          p {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+@include m.desktop {
+  .section_recomendation-courses {
+    .info {
+      h2 {
+        justify-content: start;
+        margin-left: 1rem;
+      }
+      p {
+        text-align: start;
+        margin-left: 1rem;
+        width: 60%;
+      }
+    }
+    .recomended_courses {
+      .courses {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        .left {
+          img {
+            margin: 2rem 0;
+          }
+          .content_button {
+            display: none;
+          }
+        }
+        .right {
+          .content_button {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ export function Library() {
   return (
     <>
       <HeaderL />
+      <hr />
       <Recomendation />
     </>
   );

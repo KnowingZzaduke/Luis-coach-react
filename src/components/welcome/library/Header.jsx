@@ -1,21 +1,9 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { useContext } from "react";
-import { DataContext } from "../../context/DataContext";
+import { DataContext } from "../../../context/DataContext";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 export function HeaderL() {
   const { courses } = useContext(DataContext);
-  const carouselSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-  };
 
   return (
     <header className="headerL">
@@ -32,19 +20,19 @@ export function HeaderL() {
       </p>
       <hr />
       <div className="content_carousel">
-        <Slider>
+        <Carousel className="carousel">
           {courses.map((course) => (
-            <div className="content_course">
+            <div className="content_course" key={course.id}>
               <div className="left">
                 <img src={course.img} />
               </div>
               <div className="right">
-                <h2>{course.title}</h2>
+                <h2>{course.name}</h2>
                 <p>{course.description}</p>
               </div>
             </div>
           ))}
-        </Slider>
+        </Carousel>
       </div>
     </header>
   );

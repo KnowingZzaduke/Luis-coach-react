@@ -15,7 +15,7 @@ export function Footer() {
         </li>
       </ul>
       <div className="copy">
-        <p>© 2022 Luis Gabriel Buelvas Romero.</p>
+        <p>© 2023 Luis Gabriel Buelvas Romero.</p>
         <ul>
           <li>
             <a href="#">
@@ -23,7 +23,10 @@ export function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/channel/UCmo9j6u3RgvChsm8j8gVJ3A" target="_blank">
+            <a
+              href="https://www.youtube.com/channel/UCmo9j6u3RgvChsm8j8gVJ3A"
+              target="_blank"
+            >
               <FaYoutube />
             </a>
           </li>

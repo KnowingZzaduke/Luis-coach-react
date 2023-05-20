@@ -5,7 +5,7 @@ export function Signin() {
   const navigate = useNavigate();
   function handleSubmit(e) {
     e.preventDefault();
-    navigate("/welcome");
+    navigate("/welcome/cursos");
   }
   return (
     <div className="content_formulario">

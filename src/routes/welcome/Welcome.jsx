@@ -1,12 +1,20 @@
-import { HeaderW } from "../../components/welcome/Header";
-import { Courses } from "../../components/welcome/Courses";
+import { NavbarW } from "../../components/welcome/Navbar";
+import { Outlet } from "react-router-dom";
 import { Footer } from "../../components/principal/Footer";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 export function Welcome() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/welcome/cursos");
+  }, []);
+
   return (
-    <>
-      <HeaderW />
-      <Courses />
+    <div className="content_components-courses">
+      <NavbarW />
+      <Outlet />
       <Footer />
-    </>
+    </div>
   );
 }

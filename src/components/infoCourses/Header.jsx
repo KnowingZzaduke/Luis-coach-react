@@ -1,9 +1,11 @@
 import FotoLuis from "/img/Foto-Luis Gabriel.png";
+import { NavbarI } from "./Navbar";
 import { benefits } from "../../data/const";
 import { motion } from "framer-motion";
 export function HeaderI() {
   return (
     <header className="header_i">
+      <NavbarI />
       <div className="content_benefits">
         <div className="left">
           <h1>Beneficios</h1>
