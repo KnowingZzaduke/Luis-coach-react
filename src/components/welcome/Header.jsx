@@ -1,4 +1,4 @@
-import Finanzas from "/img/finanzas-header.jpg";
+import Finanzas from "/img/exito.webp";
 import { FaPuzzlePiece } from "react-icons/fa";
 import Typed from "typed.js";
 import { useState, useRef, useEffect } from "react";
@@ -9,7 +9,7 @@ export function HeaderW() {
   const name2 = useRef(null);
   useEffect(() => {
     const typed = new Typed(name.current, {
-      strings: ["Bienvenido 👋"],
+      strings: ["Bienvenido/a 👋"],
       typeSpeed: 50,
     });
 

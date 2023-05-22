@@ -1,5 +1,8 @@
 import videoLogoLuis from "/video/L-video-fondo.mp4";
 import LogoLuis from "/img/luis-transparent.png";
+import hand from "/img/hand.webp";
+import books from "/img/books.webp";
+import rocket from "/img/rocket.webp";
 import {
   FaBars,
   FaTimesCircle,
@@ -11,6 +14,7 @@ import {
 } from "react-icons/fa";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import videoHeader from "/video/fondo-header.mp4";
 export function Header() {
   const [menu, setMenu] = useState(false);
   function openMenu() {
@@ -82,21 +86,24 @@ export function Header() {
             </div>
           </div>
         </div>
-        <motion.div
-          className="right"
-          initial={{ opacity: 0, y: 300 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", bounce: 0.4, duration: 3 }}
-        >
-          <video
-            src={videoLogoLuis}
-            className="video_found"
-            autoPlay
-            loop
-            muted
+        <div className="right">
+          <motion.img
+            src={rocket}
+            className="rocket"
+            initial={{ opacity: 0, y: 300 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", bounce: 0.4, duration: 3 }}
           />
-        </motion.div>
+          <motion.img
+            src={hand}
+            className="hand"
+            initial={{ opacity: 0, y: 300 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", bounce: 0.4, duration: 3 }}
+          />
+        </div>
       </div>
+      <video src={videoHeader} loop autoPlay muted className="money" />
     </header>
   );
 }

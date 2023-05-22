@@ -25,10 +25,19 @@ export function HeaderL() {
             <div className="content_course" key={course.id}>
               <div className="left">
                 <img src={course.img} />
+                <div className="content_button">
+                  <button>Ver contenido</button>
+                </div>
+                <p>
+                  Desliza hacía la derecha o izquierda para ver los demás cursos
+                </p>
               </div>
               <div className="right">
                 <h2>{course.name}</h2>
                 <p>{course.description}</p>
+                <div className="content_button">
+                  <button>Ver contenido</button>
+                </div>
               </div>
             </div>
           ))}
