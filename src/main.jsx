@@ -12,6 +12,8 @@ import { WelcomeW } from "./components/welcome/Welcome";
 import { InfoCourses } from "./routes/infoCourses/InfoCourses";
 import { Info } from "./components/infoCourses/Info";
 import { Library } from "./components/welcome/library/Library";
+import { Courses } from "./routes/courses/Courses";
+import { ContentCourses } from "./components/courses/ContentCourses";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,6 +49,16 @@ const router = createBrowserRouter([
       {
         path: "/info&cursos/:id/info",
         element: <Info />,
+      },
+    ],
+  },
+  {
+    path: "/contenido&curso/:id",
+    element: <Courses />,
+    children: [
+      {
+        path: "/contenido&curso/:id/material",
+        element: <ContentCourses />,
       },
     ],
   },

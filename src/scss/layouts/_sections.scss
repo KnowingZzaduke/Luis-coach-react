@@ -183,16 +183,6 @@
     }
     .content_cursos {
       margin-top: 2rem;
-      .curso {
-        .info {
-          img {
-            transition: 0.55s ease;
-            &:hover {
-              transform: scale(1.1);
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -202,6 +192,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    h2 {
+      font-size: 3rem;
+    }
     .content_benefits {
       .benefit {
         .img {

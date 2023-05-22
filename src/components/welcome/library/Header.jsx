@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { DataContext } from "../../../context/DataContext";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
 export function HeaderL() {
   const { courses } = useContext(DataContext);
 
@@ -26,7 +27,12 @@ export function HeaderL() {
               <div className="left">
                 <img src={course.img} />
                 <div className="content_button">
-                  <button>Ver contenido</button>
+                  <Link
+                    to={`/contenido&curso/${course.id}/material`}
+                    target="_blank"
+                  >
+                    <button>Ver contenido</button>
+                  </Link>
                 </div>
                 <p>
                   Desliza hacía la derecha o izquierda para ver los demás cursos
@@ -36,7 +42,12 @@ export function HeaderL() {
                 <h2>{course.name}</h2>
                 <p>{course.description}</p>
                 <div className="content_button">
-                  <button>Ver contenido</button>
+                  <Link
+                    to={`/contenido&curso/${course.id}/material`}
+                    target="_blank"
+                  >
+                    <button>Ver contenido</button>
+                  </Link>
                 </div>
               </div>
             </div>

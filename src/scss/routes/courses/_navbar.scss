@@ -1,11 +1,7 @@
 @use "../../base/variables" as v;
 @use "../../base/mixins" as m;
 
-.header_w {
-  background-image: url(/img/header-cerdito.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+.content_material-courses {
   nav {
     position: fixed;
     width: 100%;
@@ -76,7 +72,7 @@
               width: 77px;
               &:hover {
                 text-decoration: underline;
-                color: v.$gris;
+                color: v.$azul;
               }
             }
           }
@@ -128,61 +124,10 @@
       }
     }
   }
-  .content_welcome {
-    display: flex;
-    flex-direction: column-reverse;
-    .left {
-      text-align: center;
-      margin-top: 1rem;
-      img {
-        width: 300px;
-      }
-      .content_button {
-        margin-top: 1rem;
-        a {
-          text-decoration: none;
-          button {
-            padding: 1rem 4rem;
-            display: flex;
-            align-items: center;
-            column-gap: 5px;
-            margin: 0% auto;
-            font-size: 20px;
-          }
-        }
-      }
-    }
-    .right {
-      padding-top: 5rem;
-      .info {
-        h1 {
-          font-size: 3rem;
-          color: v.$blanco;
-          text-align: center;
-          margin: 0% 5px;
-          span {
-            display: none;
-          }
-        }
-        p {
-          color: v.$blanco;
-          margin: 0 10px;
-          font-size: 20px;
-          span {
-            display: none;
-          }
-        }
-      }
-      .content_button {
-        display: none;
-      }
-    }
-  }
 }
-
 //Versión responsive
 @include m.tablet {
-  .header_w {
+  .content_material-courses {
     nav {
       .center_v {
         width: 200px;
@@ -192,21 +137,10 @@
         margin-right: 20px;
       }
     }
-    .content_welcome {
-      .left {
-        img {
-          width: 400px;
-        }
-      }
-    }
   }
 }
 @include m.desktop {
-  .header_w {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .content_material-courses {
     nav {
       .left {
         img {
@@ -266,50 +200,5 @@
         display: none;
       }
     }
-    .content_welcome {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      align-items: center;
-      .left {
-        img {
-          width: 500px;
-        }
-        .content_button {
-          display: none;
-        }
-      }
-      .right {
-        padding-top: 0%;
-        grid-row: 1/2;
-        .info {
-          h1 {
-            font-size: 4rem;
-          }
-          p {
-            text-align: center;
-            font-size: 25px;
-          }
-        }
-        .content_button {
-          display: block;
-          margin-top: 1rem;
-          a {
-            text-decoration: none;
-            button {
-              padding: 1rem 4rem;
-              display: flex;
-              align-items: center;
-              column-gap: 5px;
-              margin: 0% auto;
-              font-size: 20px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@include m.desktopXl {
-  .header_w {
   }
 }
