@@ -13,7 +13,7 @@ import { InfoCourses } from "./routes/infoCourses/InfoCourses";
 import { Info } from "./components/infoCourses/Info";
 import { Library } from "./components/welcome/library/Library";
 import { Courses } from "./routes/courses/Courses";
-import { ContentCourses } from "./components/courses/ContentCourses";
+import { ContentCourses } from "./components/courses/contentCourses/ContentCourses";
 const router = createBrowserRouter([
   {
     path: "/",
