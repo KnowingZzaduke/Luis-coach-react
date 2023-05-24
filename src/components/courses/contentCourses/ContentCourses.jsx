@@ -1,4 +1,3 @@
-import { FaRegCommentAlt } from "react-icons/fa";
 import { useContext } from "react";
 import { DataContext } from "../../../context/DataContext";
 import { useParams } from "react-router-dom";
@@ -19,19 +18,6 @@ export function ContentCourses() {
           );
         }
       })}
-
-      <div className="content_commentary">
-        <h2>
-          Ingresa tu comentario
-          <FaRegCommentAlt />
-        </h2>
-        <form>
-          <input placeholder="Comentario" />
-          <div className="content_button">
-            <button>Enviar</button>
-          </div>
-        </form>
-      </div>
     </div>
   );
 }

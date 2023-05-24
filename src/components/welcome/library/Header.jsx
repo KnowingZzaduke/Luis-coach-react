@@ -28,7 +28,7 @@ export function HeaderL() {
                 <img src={course.img} />
                 <div className="content_button">
                   <Link
-                    to={`/contenido&curso/${course.id}/material`}
+                    to={`/contenido&curso/${course.id}/material/`}
                     target="_blank"
                   >
                     <button>Ver contenido</button>

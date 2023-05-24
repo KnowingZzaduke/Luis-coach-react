@@ -24,7 +24,7 @@ export function Modules() {
     <section className="section_modules-curso">
       <h2>Módulos</h2>
       <div className="content_modules">
-        {courses?.map((course) => {
+        {courses?.filter((course) => {
           if (course.id === parseInt(id)) {
             return course.modules.map((module) => (
               <motion.div
