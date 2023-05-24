@@ -29,7 +29,7 @@ export function Courses() {
             className="course"
             initial={cardVariants.offscreen}
             whileInView={cardVariants.onscreen}
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.3 }}
             key={course.id}
           >
             <h2>{course.name}</h2>

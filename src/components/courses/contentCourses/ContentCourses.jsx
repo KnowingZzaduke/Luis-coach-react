@@ -13,7 +13,7 @@ export function ContentCourses() {
         if (course.id === parseInt(id)) {
           return (
             <div className="content" key={course.id}>
-              <Left course={course} />
+              <Left course={course} id={id}/>
               <Right course={course} />
             </div>
           );
