@@ -7,6 +7,7 @@
     display: grid;
     .left {
       text-align: center;
+      padding: 0.1px;
       img {
         width: 300px;
       }
@@ -14,12 +15,13 @@
         text-align: center;
       }
       .content_comments {
-        margin-top: 2rem;
+        margin: 2rem 0;
         display: none;
         width: 90%;
         margin: 0% auto;
         border: 1px solid v.$negro;
         padding: 10px;
+        border-radius: 5px;
         h2 {
           color: v.$negro;
           display: flex;
@@ -107,7 +109,8 @@
         }
       }
       .content_comments {
-        margin-top: 2rem;
+        margin: 2rem 0;
+        border-radius: 5px;
         h2 {
           color: v.$negro;
           display: flex;
@@ -160,6 +163,7 @@
         }
         .content_comments {
           display: block;
+          margin: 1rem auto;
         }
       }
       .right {
